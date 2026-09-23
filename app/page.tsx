@@ -78,7 +78,7 @@ const sources = [
   {
     label: "Baysports payments and invoice management design",
     detail: "Primary source document and repository findings",
-    href: "#",
+    href: "/baysports-payments-and-invoice-management-design.html",
   },
   {
     label: "Fracto",
@@ -920,7 +920,7 @@ export default function Presentation() {
                     ) : (
                       <a className="source-item" href={source.href} target="_blank" rel="noreferrer" key={source.label}>
                         <div><strong>{source.label}</strong><span>{source.detail}</span></div>
-                        <ExternalLink size={17} />
+                        {source.href.startsWith("/") ? <FileText size={17} /> : <ExternalLink size={17} />}
                       </a>
                     )
                   ))}
